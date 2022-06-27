@@ -1,0 +1,34 @@
+HEARDER
+
+O hearder, codificado em UTF-8, é constituindo por: 
+	-8 bytes para definir o tamanaho do conteúdo;
+	-2 bytes com o tamanho da mensagem;
+	-restantes corresponde à mensagem.
+---------------------------------------------------------
+MESSAGE
+
+	Type - tipo de comando a executar
+	toDict- transforma o objeto num dicionário
+-----------------------------------------------------------
+TIPOS DE MESSAGE
+
+Subscribe					| type : "subscribe", topic - tópico a ser subscrito;
+SubscribeAcK					| type : "subsack", topic - tópico de contexto;
+Publish						| type : "publish", topic - tópico de contexto; post - conteúdo;
+cancel						| type : "cancel", topic - tópico de contexto;
+List 						| type : "list";
+ListAck						| type : "list", topic- tópico do contexto;
+Notify 						| type : "notify", topic - tópico de contexto, post - conteúdo;
+-------------------------------------------------------------------------------------
+DICT --> BIN
+
+XML	: toXML
+JSON 	: toJSON
+Pickle	: toPickle
+
+-------------------------------------------------------------------------------------
+BIN--> DICT
+
+XML	: fromXML
+JSON 	: fromJSON
+Pickle	: fromPickle
