@@ -1,0 +1,1 @@
+Para funcionar é preciso existir uma pasta temp, este ficheiro é só para que ela exista no github
